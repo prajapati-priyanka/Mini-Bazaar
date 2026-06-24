@@ -1,0 +1,92 @@
+.productListing {
+  padding: $spacing-xl;
+}
+
+.productListingHeader {
+  margin-bottom: $spacing-xl;
+}
+
+.productListingTitle {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-xs;
+}
+
+.productListingCount {
+  color: $color-text-muted;
+}
+
+.productListingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .productListingGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .productListingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .productListingGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.skeletonHeading,
+.skeletonSubHeading {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #e5e7eb;
+
+  border-radius: 4px;
+}
+
+.skeletonHeading {
+  width: 220px;
+  height: 36px;
+
+  margin-bottom: 12px;
+}
+
+.skeletonSubHeading {
+  width: 140px;
+  height: 18px;
+}
+
+.skeletonHeading::after,
+.skeletonSubHeading::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  transform: translateX(-100%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+
+  animation: shimmer 1.5s infinite;
+}

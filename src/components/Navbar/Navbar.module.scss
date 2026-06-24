@@ -1,0 +1,70 @@
+.header {
+  @include flex-between;
+   padding: $spacing-md $spacing-xl;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.headerLinks {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.cart {
+  @include button-reset;
+
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+ 
+  position: relative;
+   font-size: 1.75rem;
+
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.cartBadge {
+  position: absolute;
+
+  top: -8px;
+  right: -12px;
+
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: $color-danger;
+  color: $color-white;
+
+  font-size: 0.75rem;
+  font-weight: $font-weight-bold;
+}
+
+@include mobile {
+  .header {
+    padding: $spacing-md;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+}

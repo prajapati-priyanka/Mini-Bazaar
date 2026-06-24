@@ -1,0 +1,52 @@
+.notFound {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: $spacing-xl;
+}
+
+.notFoundCode {
+  font-size: 6rem;
+  font-weight: $font-weight-bold;
+
+  color: $color-primary;
+
+  margin-bottom: $spacing-sm;
+}
+
+.notFoundTitle {
+  font-size: 2rem;
+
+  margin-bottom: $spacing-md;
+}
+
+.notFoundDescription {
+  color: $color-text-muted;
+
+  margin-bottom: $spacing-xl;
+}
+
+.notFoundButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: $spacing-md $spacing-lg;
+
+  border-radius: $radius-md;
+
+  background: $color-primary;
+  color: $color-white;
+
+  text-decoration: none;
+
+  font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,25 @@
+.errorState {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 1rem;
+}
+
+.retryButton {
+  padding: 0.75rem 1.25rem;
+
+  border: none;
+  border-radius: $radius-md;
+
+  background: $color-primary;
+  color: $color-white;
+
+  cursor: pointer;
+}

@@ -1,0 +1,305 @@
+.productDetails {
+  padding: $spacing-lg;
+}
+
+.productDetailsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-lg;
+}
+
+.productImageSection {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.productImage {
+  width: 100%;
+  max-height: 350px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.productCategory {
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-sm;
+}
+
+.productTitle {
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+  line-height: 1.3;
+}
+
+.productPrice {
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  margin-bottom: $spacing-lg;
+}
+
+.colorContainer {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: $spacing-sm;
+}
+
+.colorSwatch {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  border: 2px solid transparent;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.activeColor {
+  box-shadow:
+    0 0 0 2px $color-white,
+    0 0 0 4px $color-primary;
+}
+.sizeSection {
+  margin-top: $spacing-lg;
+}
+
+.sizeContainer {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.sizeButton {
+  min-width: 50px;
+  padding: $spacing-sm;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+
+  background: $color-white;
+
+  cursor: pointer;
+}
+
+.activeSize {
+  background: $color-primary;
+  color: $color-white;
+  border-color: $color-primary;
+}
+
+.sizeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sizeSection {
+  margin-top: $spacing-lg;
+}
+
+.sizeContainer {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.sizeButton {
+  min-width: 50px;
+  padding: $spacing-sm;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+
+  background: $color-white;
+
+  cursor: pointer;
+}
+
+.activeSize {
+  background: $color-primary;
+  color: $color-white;
+  border-color: $color-primary;
+}
+
+.sizeButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.stockStatus {
+  margin-top: $spacing-md;
+  font-weight: $font-weight-semibold;
+}
+
+.available {
+  color: $color-success;
+}
+
+.lowStock {
+  color: $color-warning;
+}
+
+.soldOut {
+  color: $color-danger;
+}
+
+.quantityControl {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  overflow: hidden;
+}
+.quantityButton {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background: $color-white;
+
+  cursor: pointer;
+}
+
+.quantityValue {
+  width: 50px;
+
+  text-align: center;
+
+  font-weight: $font-weight-semibold;
+}
+
+.productDescription {
+  color: $color-text;
+  line-height: 1.8;
+  margin-bottom: $spacing-xl;
+}
+
+.productActions {
+  margin-top: auto;
+}
+
+.addToCartBtn {
+  width: 100%;
+  padding: $spacing-md;
+
+  border: none;
+  border-radius: $radius-md;
+
+  background: $color-primary;
+  color: $color-white;
+
+  font-size: 1rem;
+  font-weight: $font-weight-semibold;
+
+  transition: 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  opacity: 0.9;
+}
+
+@include mobile {
+  .productDetailsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .productTitle {
+    font-size: 1.5rem;
+  }
+
+  .productPrice {
+    font-size: 1.5rem;
+  }
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+
+  gap: 0.75rem;
+
+  margin-top: 1rem;
+}
+
+.thumbnailButton {
+  width: 56px;
+  height: 56px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  background: $color-white;
+
+  cursor: pointer;
+
+  padding: 0.25rem;
+
+  transition: all 0.2s ease;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.activeThumbnail {
+  border-color: $color-primary;
+
+  box-shadow: 0 0 0 1px $color-primary;
+}
+
+@media (max-width: 767px) {
+  .thumbnailContainer {
+    overflow-x: auto;
+
+    padding-bottom: 0.5rem;
+  }
+
+  .thumbnailButton {
+    flex-shrink: 0;
+  }
+}
+
+.backLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-bottom: $spacing-lg;
+
+  color: $color-primary;
+
+  font-weight: $font-weight-regular;
+
+  text-decoration: none;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

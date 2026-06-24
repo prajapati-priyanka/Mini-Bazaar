@@ -1,0 +1,66 @@
+.productCard {
+  @include card;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.productCardImageWrapper {
+  height: 180px;
+}
+
+.productCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.6rem;
+transition: transform 400ms ease;
+ &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.productCardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: $spacing-md;
+}
+
+.productCardTitle {
+ margin-bottom: $spacing-sm;
+
+  font-size: 1rem;
+  font-weight: $font-weight-semibold;
+  line-height: 1.4;
+}
+
+.productCardPrice {
+  margin-top: auto;
+  margin-bottom: $spacing-md;
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+  font-size: 1.125rem;
+}
+
+.productCardButton {
+  width: 100%;
+
+  padding: $spacing-sm;
+
+  border: none;
+
+  border-radius: $radius-md;
+
+  background: $color-primary;
+  color: $color-white;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+
+   &:hover {
+    opacity: 0.9;
+  }
+
+}

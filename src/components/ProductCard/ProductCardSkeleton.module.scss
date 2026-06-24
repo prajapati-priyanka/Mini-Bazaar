@@ -1,0 +1,77 @@
+.skeletonCard {
+  @include card;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeletonImageWrapper {
+  height: 180px;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 100%;
+
+  @include shimmer;
+}
+
+.skeletonContent {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: $spacing-md;
+}
+
+.skeletonTitle {
+  height: 16px;
+  width: 90%;
+
+  border-radius: 4px;
+
+  margin-bottom: 8px;
+
+  @include shimmer;
+}
+
+.skeletonTitleShort {
+  height: 16px;
+  width: 60%;
+
+  border-radius: 4px;
+
+  margin-bottom: 16px;
+
+  @include shimmer;
+}
+
+.skeletonPrice {
+  width: 35%;
+  height: 20px;
+
+  margin-top: auto;
+  margin-bottom: 16px;
+
+  border-radius: 4px;
+
+  @include shimmer;
+}
+
+.skeletonButton {
+  width: 100%;
+  height: 38px;
+
+  border-radius: $radius-md;
+
+  @include shimmer;
+}

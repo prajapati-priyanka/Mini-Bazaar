@@ -51,11 +51,8 @@ npm run dev
 
 ## Project Structure
 
-```text
-## Project Structure
-
-```text
-src
+```
+src/
 ├── components
 │   ├── CartDrawer
 │   │   ├── CartDrawer.tsx

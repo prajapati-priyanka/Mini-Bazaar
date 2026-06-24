@@ -32,7 +32,7 @@ A simple ecommerce application built with React, TypeScript, and SCSS Modules us
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/prajapati-priyanka/Mini-Bazaar>
 ```
 
 Install dependencies:
@@ -45,18 +45,6 @@ Start the development server:
 
 ```bash
 npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
-```
-
-Preview production build:
-
-```bash
-npm run preview
 ```
 
 ## Project Structure

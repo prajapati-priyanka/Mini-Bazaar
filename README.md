@@ -2,6 +2,8 @@
 
 A simple ecommerce application built with React, TypeScript, and SCSS Modules using the Fake Store API.
 
+[Live Demo](https://mini-bazaar.netlify.app/)
+
 ## Features
 
 * Product Listing Page
